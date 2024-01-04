@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 import MainNav from "@/components/main-nav";
@@ -11,18 +9,8 @@ import { Category } from "@/types";
 
 export const revalidate = 0;
 
-const Navbar = () => {
-  const [categories, setCategories] = useState<Category[]>([]);
-
-  useEffect(() => {
-    const fetchCategories = async () => {
-      const categories = await getCategories();
-      setCategories(categories);
-    };
-
-    fetchCategories();
-  }, []);
-
+const Navbar = async () => {
+  const categories = await getCategories();
   return (
     <div className="border-b">
       <Container>

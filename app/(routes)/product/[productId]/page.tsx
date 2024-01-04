@@ -4,8 +4,6 @@ import Gallery from "@/components/gallery";
 import Info from "@/components/info";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
-import { Product } from "@/types";
-import { useEffect, useState } from "react";
 
 interface ProductPageProps {
   params: {
